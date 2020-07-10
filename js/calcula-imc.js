@@ -1,8 +1,7 @@
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
 
-var pacientes = document.querySelectorAll(".paciente"); //Diferente do querySelector, o querySelectorAll não
-                                                        //puxa apenas o primeiro registro, puxa todos.
+var pacientes = document.querySelectorAll(".paciente"); 
 
 for (var i = 0; i < pacientes.length; i++) {
 
@@ -23,11 +22,7 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido!"
-        paciente.classList.add("paciente-invalido"); // ou: paciente.style.backgroundColor = "lightcoral";
-                                                     // "backgroundColor", e não "background-color",
-                                                     // pois correto é usar o padrão camelCase quando estamos 
-                                                     // tentando acessar um estilo que possui duas palavras 
-                                                     // no CSS.
+        paciente.classList.add("paciente-invalido"); 
     }
 
     if (!alturaEhValida) {
@@ -62,5 +57,5 @@ function validaAltura(altura) {
 function calculaImc(peso,altura) {
     var imc = 0;
     imc = peso / (altura * altura);
-    return imc.toFixed(2); // Define o número de casas decimais, arredondando o número.
+    return imc.toFixed(2);
 }
